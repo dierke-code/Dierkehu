@@ -1,0 +1,456 @@
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dierke</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" type="image/png" href="dier.jpg">
+    <style>
+        @keyframes move {
+    100% {
+        transform: translate3d(0, 0, 1px) rotate(360deg);
+    }
+    
+}
+.background {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: #2d2f39;
+    overflow: hidden;
+}
+
+.background span {
+    width: 30vmin;
+    height: 30vmin;
+    border-radius: 20vmin;
+    backface-visibility: hidden;
+    position: absolute;
+    animation: move;
+    animation-duration: 5;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    filter: blur(80px);
+    opacity: 0.7;
+}
+
+
+.background span:nth-child(0) {
+    color: #006eff;
+    top: 48%;
+    left: 85%;
+    animation-duration: 99s;
+    animation-delay: -418s;
+    transform-origin: 23vw -15vh;
+    box-shadow: 40vmin 0 5.91404511826001vmin currentColor;
+}
+.background span:nth-child(1) {
+    color: #00bfff;
+    top: 74%;
+    left: 92%;
+    animation-duration: 29s;
+    animation-delay: -69s;
+    transform-origin: 14vw 2vh;
+    box-shadow: 40vmin 0 5.91404511826001vmin currentColor;
+}
+.background span:nth-child(2) {
+    color: #006eff;
+    top: 49%;
+    left: 85%;
+    animation-duration: 385s;
+    animation-delay: -401s;
+    transform-origin: 17vw 22vh;
+    box-shadow: 40vmin 0 5.91404511826001vmin currentColor;
+}
+.background span:nth-child(3) {
+    color: #0040ff;
+    top: 90%;
+    left: 57%;
+    animation-duration: 119s;
+    animation-delay: -330s;
+    transform-origin: 17vw -22vh;
+    box-shadow: 40vmin 0 5.91404511826001vmin currentColor;
+}
+.background span:nth-child(4) {
+    color: #00bfff;
+    top: 36%;
+    left: 93%;
+    animation-duration: 206s;
+    animation-delay: -181s;
+    transform-origin: -8vw -10vh;
+    box-shadow: 40vmin 0 5.91404511826001vmin currentColor;
+}
+.background span:nth-child(5) {
+    color: #0040ff;
+    top: 12%;
+    left: 81%;
+    animation-duration: 430s;
+    animation-delay: -200s;
+    transform-origin: 14vw -7vh;
+    box-shadow: 40vmin 0 5.91404511826001vmin currentColor;
+}
+.background span:nth-child(6) {
+    color: #006eff;
+    top: 80%;
+    left: 47%;
+    animation-duration: 206s;
+    animation-delay: -370s;
+    transform-origin: 13vw 25vh;
+    box-shadow: 40vmin 0 5.91404511826001vmin currentColor;
+}
+.background span:nth-child(7) {
+    color: #00bfff;
+    top: 99%;
+    left: 2%;
+    animation-duration: 417s;
+    animation-delay: -49s;
+    transform-origin: 16vw -12vh;
+    box-shadow: 40vmin 0 5.91404511826001vmin currentColor;
+}
+.background span:nth-child(8) {
+    color: #0040ff;
+    top: 37%;
+    left: 15%;
+    animation-duration: 380s;
+    animation-delay: -39s;
+    transform-origin: 10vw -7vh;
+    box-shadow: 40vmin 0 5.91404511826001vmin currentColor;
+}
+.background span:nth-child(9) {
+    color: #006eff;
+    top: 18%;
+    left: 85%;
+}
+        body {
+            font-family: Arial, sans-serif;
+            position: relative;
+            color: #fff;
+            height: 100vh;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            margin: auto;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            overflow: auto;
+            background: linear-gradient(315deg, rgba(101,0,94,1) 3%, rgba(60,132,206,1) 38%, rgba(48,238,226,1) 68%, rgba(255,25,25,1) 98%);
+            animation: gradient 15s ease infinite;
+            background-size: 400% 400%;
+            background-attachment: fixed;
+            
+        }
+        @keyframes gradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+.wave {
+    background: rgb(255 255 255 / 25%);
+    border-radius: 1000% 1000% 0 0;
+    position: fixed;
+    width: 200%;
+    height: 12em;
+    animation: wave 10s -3s linear infinite;
+    transform: translate3d(0, 0, 0);
+    opacity: 0.8;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.wave:nth-of-type(2) {
+    bottom: -1.25em;
+    animation: wave 18s linear reverse infinite;
+    opacity: 0.8;
+}
+
+.wave:nth-of-type(3) {
+    bottom: -2.5em;
+    animation: wave 20s -1s reverse infinite;
+    opacity: 0.9;
+}
+
+@keyframes wave {
+    2% {
+        transform: translateX(1);
+    }
+
+    25% {
+        transform: translateX(-25%);
+    }
+
+    50% {
+        transform: translateX(-50%);
+    }
+
+    75% {
+        transform: translateX(-25%);
+    }
+
+    100% {
+        transform: translateX(1);
+    }
+}
+
+        .dark-stripe {
+            position: absolute;
+            top: -100%;
+            left: -100%;
+            width: 300%;
+            height: 300%;
+            background: linear-gradient(135deg, rgba(58, 58, 58, 0) 40%, #3a3a3a 50%, rgba(58, 58, 58, 0) 60%);
+            animation: moveStripe 5s ease-in-out infinite;
+        }
+        .profile {
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+        #spoti{
+            margin-top: 20px;
+            margin-bottom: 30px;
+        }
+        #spotisz{
+            margin-bottom: 0px;
+        }
+        .profile img {
+            height: 120px;
+            width: 120px;
+            border-radius: 50%;
+            border: 3px solid rgb(129, 129, 129);
+        }
+        .social-icons {
+            margin-top: 15px;
+            display: flex;
+            gap: 25px;
+        }
+        .social-icons a {
+            color: rgb(177, 255, 147);
+            font-size: 35px;
+            text-decoration: none;
+            transition: color 0.3s, transform 0.3s;
+        }
+        .social-icons a:hover {
+            color: rgb(44, 87, 34);
+            transform: scale(1.3);
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: stretch;
+            margin: 2cm auto;
+            width: 90%;
+            gap: 35px;
+        }
+        .container a {
+            text-decoration: none; /* Ne legyen aláhúzott link */
+        }
+        .box {
+            display: block; /* Teljes kattintható terület */
+            background-color: rgba(0, 0, 0, 0.3);
+            padding: 15px;
+            position: relative;
+            border-radius: 10px;
+            width: 20%;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            text-align: center;
+            color: white; /* Link szöveg színe */
+        }
+        .box:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 20px rgb(44, 87, 34);
+        }
+        .box img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .button {
+            display: block;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: rgb(177, 255, 147);
+            color: black;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .link{
+            text-decoration: none;
+            color: white;
+        }
+        .button:hover {
+            background-color: rgb(37, 170, 7);
+        }
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .box {
+                width: 80%;
+            }
+        }
+
+        hr{
+            border: none;
+            height: 4px;
+        }
+        .profile2 {
+            margin-top: 5px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px 20px;
+            position: relative;
+        }
+        .pp{
+            font:900;
+            font-size: 25px;
+            color: white; /* A szöveg színe */
+            -webkit-text-stroke: 0.3px black; /* 1.5 px-es fekete körvonal */
+            margin-bottom: 0;
+            margin-top: 5%;
+        }
+        .pp2{
+            -webkit-text-stroke: 0.3px black;
+        }
+        .profile iframe{
+            position: absolute;
+            right: 0;
+
+        }
+        .navbar {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        .nav-item {
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+            margin-right: 20px;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            transition: color 0.3s ease;
+        }
+
+        .nav-item i {
+            margin-right: 8px;
+        }
+
+        .nav-item:hover {
+            color: rgb(37, 170, 7);
+        }
+        .kep{
+                width: 200px;
+                height: 200px;
+            }
+        @media (max-width: 768px) {
+            .nav-links {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background: rgba(0, 0, 0, 0.9);
+                position: absolute;
+                top: 84px;
+                left: 0;
+                right: 0;
+                padding: 15px 0;
+                z-index: 100;
+                opacity: 0;
+                transform: translateY(-10px);
+                transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+                visibility: hidden;
+            }
+            .navbar.active .nav-links {
+                opacity: 1;
+                transform: translateY(0);
+                visibility: visible;
+            }
+            .hamburger {
+                display: block;
+                cursor: pointer;
+                font-size: 30px;
+                color: white;
+                transition: transform 0.3s ease-in-out;
+            }
+            .hamburger.active {
+                transform: rotate(90deg);
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <div>
+        
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="profile">
+            <img src="dier.jpg" alt="">
+            <h1>Dierke</h1>
+                
+        </div>
+        <div class="container" id="container">
+            <a href="https://bet-spot.online/9CF1h2dQ" target="_blank" class="box">
+                <img src="Betmatch2.jpg" alt="">
+                <h2>Betmatch</h2>
+                <p>Befizetési bónusz akár 300000 FT-ig + 600 ingyenes pörgetésig</p>
+            </a>
+            
+            <a href="https://spinarium.cc/de93a9a44" target="_blank" class="box">
+                <img src="spinarium.png" alt="">
+                <h2>Spinarium</h2>
+                <p>200% befizetési bónusz 1000$-ig + 100 ingyenes pörgetés</p>
+            </a>
+            <a href="https://lgno.monvaki.com/?mid=255693_1499232" target="_blank" class="box">
+                <img src="legiano.jpg" alt="">
+                <h2>Legiano</h2>
+                <p>100% Befizetési bónusz akár 150 000 Ft-ig + 200 ingyenes pörgetés</p>
+            </a>
+            <a href="https://www.metadraw.com/r/dierkee" target="_blank" class="box">
+                <img src="metadraw.jpg" alt="" class="kep">
+                <h2>Metadraw</h2>
+                <p>Akár 450% első befizetési bónusz + 140 ingyenes pörgetés</p>
+            </a>
+        </div>
+        
+        <div class="profile2">
+
+            <p class="pp">Socials</p>
+            <div class="social-icons">
+                <a href="https://x.com/dierke_" target="_blank" class="pp2"><i class="fa-brands fa-X"></i></a>
+                <a href="https://www.twitch.tv/dierkee" target="_blank" class="pp2"><i class="fa-brands fa-twitch"></i></a>
+            </div>
+            
+        </div>
+    </div>
+    
+    
+    
+    
+</body>
+</html>
