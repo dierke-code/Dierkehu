@@ -1,0 +1,8 @@
+<div class="navbar">
+            <div class="hamburger" id="hamburger">
+                <i class="fa fa-bars" style="color: white; font-size: 30px;"></i>
+            </div>
+            <div class="nav-links" id="menu">
+                <a href="index.html" class="nav-item"><i class="fa fa-home"></i> FŐOLDAL</a>
+            </div>
+        </div>
